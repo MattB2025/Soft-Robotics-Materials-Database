@@ -27,7 +27,7 @@ import dash_core_components as dcc
 import dash_html_components as html
 import plotly.graph_objs as go
 from dash.dependencies import Input, Output, State
-import dash_table
+from dash import dash_table
 import dash_daq as daq  # for Toggle switch button
 # Bootstrap
 import dash_bootstrap_components as dbc
@@ -612,7 +612,6 @@ def fit_data_on_click_button(n_clicks_fit_data, material, all_constitutive_model
     return model_data.to_json(), table_param_data, table_param_column, header_table_param, aic_model, best_model, best_model, formula_label, formula_image
 
 
-
 @app.callback(
     Output('output-container-range-slider', 'children'),
     [Input('range-slider', 'value')])
@@ -694,9 +693,6 @@ def update_figure(material,slider_range,constitutive_model,jsonified_model_data,
         )
     }
     return figure, selected_exp_data.to_json()
-
-
-
 
 @app.callback(
     [Output('materials-comparison-graph', 'figure'),
