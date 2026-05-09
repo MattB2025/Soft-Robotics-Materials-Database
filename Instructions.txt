@@ -1,0 +1,10 @@
+The repository has been restructured to focus on the hyperelastic_fitting.ipynb file.
+The requirements.txt file has not been updated, but contains all necessary packages.
+
+To curve fit the included data, clone or download the repository to a local virtual
+environment, then run hyperelastic_fitting.ipynb. By default, the code searches for
+tensile test data in the same directory as the jupyter notebook. If the notebook is
+installed elsewhere, specify the file path in section 1.
+>> 1. Ensure filepaths are set correctly to import data
+>> 2. Section 2: specify the models you want to curve fit and their corresponding orders.
+To verify results, go to Section 4 and hit run to plot the curves.
